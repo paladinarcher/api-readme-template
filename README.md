@@ -1,14 +1,3 @@
-# For initial project set up click **[here](SET-UP.md)**. Delete this line afterwards
-
-* logo(optional) goes here
-<h1 align="center">
-	<img
-		width="300"
-		alt=""
-		src="https://github.com/paladinarcher/padawan/blob/master/Logo%20Pack/PNG/redcirclesm300x300.png"
-	> 
-</h1>
-
 # API Documentation Template
 Description Goes Here
 
