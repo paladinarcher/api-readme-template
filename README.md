@@ -9,58 +9,85 @@
 	> 
 </h1>
 
-<h3 align="center">
-	* Short Description goes here
-</h3>
+# API Documentation Template
+Description Goes Here
 
-<p align="center">
-	* links goes here
-	<strong>
-		<a href="">Website</a>
-		•
-		<a href="">Docs</a>
-		•
-		<a href="">Demo</a>
-	</strong>
-</p>
-<p align="center">
-	*Badges goes here
-	<a href="">
-		<img
-			alt=""
-			src=""
-		>
-	</a>
-	<a href="">
-		<img
-			alt=""
-			src=""
-		>
-	</a>
-	<a href="">
-		<img
-			alt=""
-			src=""
-		>
-	</a>
-	<a href="">
-		<img
-			alt=""
-			src=""
-		>
-	</a>
-</p>
+## Response Codes 
+### Response Codes
+```
+200: Success
+400: Bad request
+401: Unauthorized
+404: Cannot be found
+405: Method not allowed
+422: Unprocessable Entity 
+50X: Server Error
+```
+### Error Codes Details
+```
+100: Bad Request
+110: Unauthorized
+120: User Authenticaion Invalid
+130: Parameter Error
+140: Item Missing
+150: Conflict
+160: Server Error
+```
+### Example Error Message
+```json
+http code 402
+{
+    "code": 120,
+    "message": "invalid crendetials",
+    "resolve": "The username or password is not correct."
+}
+```
 
-<p align="center">
-	* Image goes here
-	<img src="https://github.com/paladinarcher/padawan/blob/master/Logo%20Pack/PNG/redcirclesm300x300.png" 
-	     width="550"
-	>
-</p>
+## Login
+**You send:**  Your  login credentials.
+**You get:** An `API-Token` with wich you can make further actions.
+
+**Request:**
+```json
+POST /login HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Content-Length: xy
+
+{
+    "username": "foo",
+    "password": "1234567" 
+}
+```
+**Successful Response:**
+```json
+HTTP/1.1 200 OK
+Server: My RESTful API
+Content-Type: application/json
+Content-Length: xy
+
+{
+   "apitoken": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "expirationDate": "2018-02-13T15:31:55.559Z"
+}
+```
+**Failed Response:**
+```json
+HTTP/1.1 401 Unauthorized
+Server: My RESTful API
+Content-Type: application/json
+Content-Length: xy
+
+{
+    "code": 120,
+    "message": "invalid crendetials",
+    "resolve": "The username or password is not correct."
+}
+``` 
 
 ## Overview
  * overview of project goes here example...  
-	- **Modern features brought to IRC.** Push notifications, link previews, new message markers, and more bring IRC to the 21st century.
+	- **API Features** Push notifications, link previews, new message markers, and more bring IRC to the 21st century.
 	- **Always connected.** Remains connected to IRC servers while you are offline.
 	- **Cross platform.** It doesn't matter what OS you use, it just works wherever Node.js runs.
 	- **Responsive interface.** The client works smoothly on every desktop, smartphone and tablet.
@@ -68,10 +95,7 @@
 	
 
 ## Installation and usage  
-* Installation and usage goes here example...
-	The Lounge requires latest [Node.js](https://nodejs.org/) LTS version or more recent.
-	[Yarn package manager](https://yarnpkg.com/) is also recommended.  
-	If you want to install with npm, `--unsafe-perm` is required for a correct install.
+* How to connect
 
 ### Running stable releases  
 

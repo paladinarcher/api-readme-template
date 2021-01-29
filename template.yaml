@@ -1,0 +1,159 @@
+swagger: '2.0'
+info:
+  description: 'This is a template for api files. Fill in the areas as needed.'
+  version: '1.0.0'
+  title: 'Simple API Template'
+  license:
+    name: 
+    url: 
+basePath: '/v2'
+tags:
+  - name: 
+    description: 
+schemes:
+  - 'https'
+  - 'http'
+paths:
+  /data/{dataName}:
+    post:
+      tags:
+      summary:
+      description:
+      operationId: 
+      consumes:
+      produces:
+      parameters:
+        - name: 
+          in: 
+          description: 
+          required: true
+          type: 
+        - in: 
+          name: 
+          description: 
+          required: true
+          type: 
+          properties:
+            id: 
+              type: 
+              description: 
+      responses:
+        200:
+          description: 
+          schema:
+            $ref: 
+        405:
+          description: 
+    get:
+      tags:
+      summary: 
+      description: 
+      operationId: 
+      produces:
+      parameters:
+        - name: 
+          in: 
+          description: 
+          required: true
+          type: 
+      responses:
+        200:
+          description: 
+          schema:
+            type: 
+            items:
+              $ref: 
+        404:
+          description: 
+  /data/{dataName}/{Id}:
+    get:
+      tags:
+      summary: 
+      description: 
+      operationId: 
+      produces:
+      parameters:
+        - name: 
+          in: 
+          description: 
+          required: true
+          type: 
+        - name: 
+          in: 
+          description:
+          required: true
+          type: 
+      responses:
+        200:
+          description: 
+          schema:
+            $ref: 
+        404:
+          description: 
+    delete:
+      tags:
+      summary: 
+      description: 
+      operationId: 
+      produces:
+      parameters:
+        - name: 
+          in: 
+          description: 
+          required: true
+          type: 
+        - name: 
+          in: 
+          description: 
+          required: true
+          type: 
+      responses:
+        200:
+          description: 
+          schema:
+            $ref: 
+        404:
+          description: 
+    put:
+      tags:
+      summary: 
+      description: 
+      operationId:
+      consumes:
+      produces:
+      parameters:
+        - name: 
+          in: 
+          description: 
+          required: true
+          type: 
+        - name: 
+          in: 
+          description: 
+          required: true
+          type: 
+        - in: 
+          name: 
+          description: 
+          required: true
+          schema:
+            $ref: 
+      responses:
+        405:
+          description: 
+definitions:
+  Document:
+    type: 'object'
+    properties:
+      id:
+        type: 'string'
+  ApiResponse:
+    type: 'object'
+    properties:
+      code:
+        type: 'integer'
+        format: 'int32'
+      type:
+        type: 'string'
+      message:
+        type: 'string'
