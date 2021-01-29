@@ -86,6 +86,9 @@ Content-Length: xy
 ## Installation and usage  
 * How to connect
 
+### Swagger UI
+Swagger UI is already included in this repo. For detailed instructions on how to us UI within the project refer to https://idratherbewriting.com/learnapidoc/pubapis_swagger.html
+
 ### Running stable releases  
 
  * running and stable releases info goes here
